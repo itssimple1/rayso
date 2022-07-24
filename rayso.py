@@ -107,7 +107,7 @@ async def rayso_by_pro_odi(event):  # By
             "https://raysoapi.herokuapp.com/generate",
             data={
                 "text": text,
-                "title": (await hell.get_me()).first_name,
+                "title": Odi,
                 "theme": theme,
                 "darkMode": "true",
                 "language": "python",
