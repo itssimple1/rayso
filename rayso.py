@@ -1,38 +1,18 @@
+import datetime
+import json
+import logging
 import os
-import random
 import re
-
-import pygments
 import requests
-from pygments.formatters import ImageFormatter
-from pygments.lexers import Python3Lexer
-from telethon.errors.rpcerrorlist import YouBlockedUserError
+
+from requests import exceptions, get
+from telethon import events
 from telethon.utils import get_extension
-from urlextract import URLExtract
 
-from userbot import catub
-
-from ..Config import Config
-from ..core.events import MessageEdited
-from ..core.logger import logging
-from ..core.managers import edit_delete, edit_or_reply
-from ..helpers.tools import media_type
-from ..helpers.utils import pastetext, reply_id
-from ..sql_helper.globals import addgvar, gvarstatus
-from . import hmention
-
-plugin_category = "utils"
+from . import *
 
 extractor = URLExtract()
 
-LOGS = logging.getLogger(__name__)
-
-pastebins = {
-    "Pasty": "p",
-    "Neko": "n",
-    "Spacebin": "s",
-    "Dog": "d",
-}
 
 THEMES = [
     "breeze",
