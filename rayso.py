@@ -51,7 +51,7 @@ def text_chunk_list(query, bits=29900):
     return text_list
   
   
-@hell_cmd("rayso(?:\s|$)([\s\S]*)",
+@hell_cmd(pattern="rayso(?:\s|$)([\s\S]*)",
 async def rayso_by_pro_odi(event):  # By 
     "To paste text or file into image."
     checker = None
