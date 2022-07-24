@@ -71,26 +71,7 @@ def text_chunk_list(query, bits=29900):
     return text_list
   
   
-@hell_cmd(
-    pattern="rayso(?:\s|$)([\s\S]*)",
-    command=("rayso", plugin_category),
-    info={
-        "header": "Create beautiful images of your code",
-        "notes": "Available Themes: | `breeze` | `candy` | `crimson` | `falcon` | `meadow` | `midnight` | `raindrop` | `random` | `sunset` |",
-        "examples": [
-            "{tr}rayso -l",
-            "{tr}rayso breeze",
-            "{tr}rayso Cat is op",
-            "{tr}rayso <reply>",
-        ],
-        "usage": [
-            "{tr}rayso -l (get list of themes)",
-            "{tr}rayso <theme> (change the theme)",
-            "{tr}rayso <text/reply> (generate)",
-            "{tr}rayso <theme> <text/reply>(generate with the theme)",
-        ],
-    },
-)
+@hell_cmd("rayso(?:\s|$)([\s\S]*)",
 async def rayso_by_pro_odi(event):  # By @feelded
     "To paste text or file into image."
     checker = None
