@@ -71,7 +71,7 @@ def text_chunk_list(query, bits=29900):
     return text_list
   
   
-  @catub.cat_cmd(
+@catub.cat_cmd(
     pattern="rayso(?:\s|$)([\s\S]*)",
     command=("rayso", plugin_category),
     info={
@@ -123,7 +123,7 @@ async def rayso_by_pro_odi(event):  # By @feelded
         theme = random.choice(THEMES)
         
         
-        if query:
+    if query:
         text = query
     elif rquery:
         if rquery.file and rquery.file.mime_type.startswith("text"):
