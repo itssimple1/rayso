@@ -71,7 +71,7 @@ def text_chunk_list(query, bits=29900):
     return text_list
   
   
-@catub.cat_cmd(
+@hell_cmd(
     pattern="rayso(?:\s|$)([\s\S]*)",
     command=("rayso", plugin_category),
     info={
